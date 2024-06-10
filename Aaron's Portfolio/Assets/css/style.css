@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/*allows adding color to each attribuite easier and to make sure that you use the same color*/
+:root {
+  --outer-space: rgb(51, 57, 63);
+  --deep-space: rgb(25, 28, 31);
+  --john-deere:  rgba(34, 255, 0, 0.774);
+  --time-stone: rgba(18, 231, 114, 0.815);
+  --snap-on: rgb(0, 87, 248);
+  --thanos: rgb(111, 60, 137);
+  --iron-man: rgb(235, 16, 16); 
+  --wolverine: rgb(255, 254, 3); 
+}
+
+.header {
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--outer-space);
+}
+
+.header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+.page-title {
+  position: relative;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--deep-space);
+  color: var(--john-deere);
+  border: 2px solid var(--time-stone);
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+
+.header h1 .title {
+  color: var(--snap-on);
+}
+
+.header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 85%;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+/*adds effects to the atribute*/
+a {
+  color: var(--time-stone);
+  text-decoration: underline;
+  position: relative;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--deep-space);
+  color: var(--john-deere);
+  border: 2px solid var(--time-stone);
+  border-radius: 4px;
+  transition: all 0.5s ease-in-out;
+}
+
+.box {
+  width: auto;
+  height: 250px;
+  border: 2px solid var(--wolverine);
+  padding: 1px;
+  background-color: var(--snap-on);
+}
+
+img{
+  height: 250px;
+  width: 75%;
+  display: block ;
+  margin: 0 auto;
+}
+
+.section2 ul li{
+  display: inline-block;
+  margin:  25px;
+  text-decoration: underline;
+  padding-left: 175px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--deep-space);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+/*adds padding and seperates the two sections*/
+.section1 {
+  flex: .2;
+  padding: 10px;
+  text-align: end;
+  font-size: 35px;
+  color: var(--john-deere);
+}
+/*adds padding and seperates the two sections*/
+.section2 {
+  flex: 1;
+  padding: 20px;
+  text-align: start;
+  color: var(--time-stone);
+}
+/*adds a border to the right of the text to the left*/
+#left-section {
+  border-right: 2px solid var(--wolverine);
+}
+/*changes the color of the text and how fast itll change*/
+.hover-text{
+  color: var(--time-stone);
+  transition: color 0.3s;
+}
+/*changes the color of the text*/
+.hover-text:hover{
+  color: var(--thanos);
+}
+/*adds glow when the cursor is over the text*/
+a:hover {
+  box-shadow: inset 0px 0px 8px var(--wolverine), 0 0 15px var(--wolverine);
+}
+/*adds glow when the cursor is over the image*/
+.box:hover {
+  box-shadow: inset 0px 5px 15px var(--wolverine), 0px 10px 15px var(--snap-on);
+}
+/*allows the text box to be over the images*/
+.jarvis {
+  position: relative;
+  display: inline-block;
+  opacity: 0.5;
+}
+/*puts the text in a box over the image*/
+.jarvis-text-overlay{
+  position: absolute;
+  bottom: 45px;
+  left: 18px;
+  background-color: var(--time-stone);
+  color: var(--deep-space);
+  padding: 45px;
+  font-size: 25px;
+}
+/*gives border and edits the picture size*/
+.jarvis-img {  
+  height: 750px;
+  width: 1500px;
+  position: relative;
+  border: 5px solid var(--time-stone);
+  border-radius: 4px;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 18px;
+  display: center;
+  
+}
+/*changes the opacity of the image and text when the cursor is over the image*/
+.arc-reactor:hover,
+.micro-chip:hover,
+.computer:hover,
+.text:hover,
+.jarvis:hover {
+  opacity: 1;
+}
+/*changes the size of the h3 element*/
+h3{
+  font-size: 45px;
+}
+/*puts the bottom 4 images in a grid pattern side by side.*/
+.image {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  gap: 10px;
+  justify-content: center;
+}
+/*allows the text box to be over the images*/
+.arc-reactor,
+.micro-chip,
+.computer,
+.text {
+  position: relative;
+  display: inline-block;
+  opacity: 0.5;
+}
+/*puts the text in a box over the image*/
+.arc-reactor-text-overlay,
+.micro-chip-text-overlay,
+.computer-text-overlay,
+.text-overlay{
+  position: absolute;
+  bottom: 45px;
+  left: 18px;
+  background-color: var(--time-stone);
+  color: var(--deep-space);
+  padding: 15px;
+  font-size: 25px;
+}
+/*gives border and edits the picture size*/
+.arc-reactor img,
+.micro-chip img,
+.computer img,
+.text img{
+  border: 2px solid var(--iron-man);
+  width: 725px;
+  position: relative;
+  border: 5px solid var(--time-stone);
+  border-radius: 4px;
+  justify-content: center;
+  margin-bottom: 10px;
+  display: center;
+}
+/*adds glow when the cursor is over the image*/
+.arc-reactor img:hover,
+.micro-chip img:hover,
+.computer img:hover,
+.text img:hover,
+.jarvis img:hover{
+  box-shadow: inset 0px 5px 15px var(--iron-man), 0px 10px 15px var(--iron-man);
+}
+/*makes it so that the image changes size when the screen size changes*/
+@media only screen and (max-width: 1800px) {
+  img{
+    max-width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  img {
+      max-width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  img {
+      max-width: 60%;
+  }
+}
+
+.footer {
+  padding: 30px;
+  clear: both;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 20px;
+}
+
